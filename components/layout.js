@@ -10,11 +10,13 @@ export const siteTitle = 'Next.js Twilio'
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
+
+      {/* This is a component from NextJS. Pretty much a wrapper for the HTML tag 'head' */}
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Twilio Integration with Next.js + MongoDB"
         />
         <meta
           property="og:image"
@@ -25,7 +27,13 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
+
+
       <header className={styles.header}>
+        {/* Conditional shorthand. Normally you would use If x Then y Else z but using shorthand
+        you can write it as x ? y : z where the ? acts as then and : acts as else
+        We check to see if we are in the homepage. Depending on the answer we change the size of our image */}
         {home ? (
           <>
             <Image
