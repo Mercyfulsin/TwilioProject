@@ -3,16 +3,26 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import NavBar from './NavBar';
 
 const name = 'Contract Squad'
 export const siteTitle = 'Next.js Twilio'
 
-export default function Layout({ children, home }) {
+const Layout = ({ children, home }) => {
   return (
+    <>
+    <NavBar />
     <div className={styles.container}>
 
       {/* This is a component from NextJS. Pretty much a wrapper for the HTML tag 'head' */}
       <Head>
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossOrigin="anonymous"
+      />
+      <link rel="stylesheet" href="https://cdn.auth0.com/js/auth0-samples-theme/1.0/css/auth0-theme.min.css" />
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -45,6 +55,7 @@ export default function Layout({ children, home }) {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <a href="/api/auth/login">Login</a>
           </>
         ) : (
           <>
@@ -68,7 +79,9 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main>
+        {children}
+        </main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
@@ -77,5 +90,7 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  </>)
 }
+
+export default Layout;
