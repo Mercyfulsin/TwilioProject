@@ -3,9 +3,9 @@
 // or add more pazazz to the page you are importing to.
 import '../styles/global.css';
 import React from 'react';
-// Imports the UserProvider component which we wrap around other components to ensure only users that log in can access it
+// Imports the UserProvider component which we wrap around nother components to ensure only users that log in can access it
 import { UserProvider } from '@auth0/nextjs-auth0';
-
+import SideBar from '../components/SideBar';
 // Think of this as just a shell or the Main() argument. You create the APP constructor that takes in components (which populate the page with components)
 // and pageProps (which can be variables or functions that get passed from one page to another, similar to React Hooks).
 export default function App({ Component, pageProps }) {
@@ -20,6 +20,7 @@ export default function App({ Component, pageProps }) {
   return (
     <UserProvider>
       <Component {...pageProps} />
+      <SideBar />
     </UserProvider>
   );
 }

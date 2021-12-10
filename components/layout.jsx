@@ -4,7 +4,6 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import NavBar from './NavBar';
-
 const name = 'Contract Squad'
 export const siteTitle = 'Next.js Twilio'
 
@@ -49,7 +48,7 @@ const Layout = ({ children, home }) => {
             <Image
               priority
               src="/images/twilio-mark-red.png"
-              className={utilStyles.borderCircle}
+              className={borderCircle}
               height={144}
               width={144}
               alt={name}
