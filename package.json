@@ -17,7 +17,7 @@
     "date-fns": "^2.11.1",
     "fortawesome": "0.0.1-security",
     "gray-matter": "^4.0.2",
-    "immer": ">=9.0.6",
+    "immer": ">9.0.6",
     "mongodb": "^4.1.4",
     "mongoose": "^6.0.12",
     "next": ">=11.1.3",
