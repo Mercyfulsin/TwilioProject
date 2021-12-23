@@ -54,7 +54,6 @@ const Layout = ({ children, home }) => {
               alt={name}
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            <a href="/api/auth/login">Login</a>
           </>
         ) : (
           <>
