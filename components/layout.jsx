@@ -48,7 +48,7 @@ const Layout = ({ children, home }) => {
             <Image
               priority
               src="/images/twilio-mark-red.png"
-              className={borderCircle}
+              className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
